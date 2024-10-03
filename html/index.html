@@ -1,10 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoXP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
+<!-- Header med hamburger menu, logo, og login knap -->
+<header>
+    <div id="menuToggle">
+        <input id="checkbox" type="checkbox">
+        <label class="toggle" for="checkbox">
+            <div class="bar bar--top"></div>
+            <div class="bar bar--middle"></div>
+            <div class="bar bar--bottom"></div>
+        </label>
 
+        <!-- Skjult menu (vises ved klik på hamburger-menuen) -->
+        <nav id="menu">
+            <ul>
+                <li>Hjem</li>
+                <li>Film</li>
+                <li>Kontakt</li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="logo">KinoXP</h1> <!-- Logoet i midten -->
+    <div class="login-button">
+        <button id="loginBtn">Login</button>
+    </div>
+</header>
+
+<!-- Sektion til nuværende film -->
+<section class="current-movies">
+    <h2>Nuværende Film</h2>
+    <div class="movie-list">
+        <div class="movie-item">Film 1</div>
+        <div class="movie-item">Film 2</div>
+        <div class="movie-item">Film 3</div>
+        <div class="movie-item">Film 4</div>
+        <div class="movie-item">Film 5</div>
+    </div>
+</section>
+
+<!-- Sektion til kommende film -->
+<section class="upcoming-movies">
+    <h2>Kommende Film</h2>
+    <div class="movie-list">
+        <div class="movie-item">Film 1</div>
+        <div class="movie-item">Film 2</div>
+        <div class="movie-item">Film 3</div>
+        <div class="movie-item">Film 4</div>
+    </div>
+</section>
+
+<!-- Footer med pseudo kontaktinformation -->
+<footer>
+    <p>Kontakt os: +45 60606060</p>
+    <p>Email: email@kinoXP.dk</p>
+</footer>
+
+<script src="../js/test.js"></script>
 </body>
 </html>
