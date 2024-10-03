@@ -1,0 +1,43 @@
+.popup{
+    display: grid;
+    justify-content: center;
+    border: crimson 0.1vh solid;
+    border-radius: 1vh;
+    width: 20vw;
+    height: 30vh;
+    background: #2A2222
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+    padding: 0.3vh; /* det her gør så det er responsive... ved ik om det godt i den her samhæng */
+}
+input{
+    width: 10vw;
+    height: 3vh;
+    border-radius: 0.5vh;
+    /*border: 0.05vh solid black;*/
+    background: #2A2222;
+    box-shadow: inset 20px 20px 60px #241d1d,
+    inset -20px -20px 60px #302727;
+
+}
+.submit-button{
+    width: 5vw;
+    height: 3vh;
+    border-radius: 0.5vh;
+    /*border: 0.05vh solid black;*/
+    background: #2A2222;
+    box-shadow: inset 20px 20px 60px #241d1d,
+    inset -20px -20px 60px #302727;
+    font-size: 1.5vh;
+    margin-top: 1vh;
+    color: #FFFEAD;
+}
+.title{
+    color: crimson;
+
+}
