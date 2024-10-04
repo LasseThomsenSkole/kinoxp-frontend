@@ -37,8 +37,22 @@ header {
 }
 
 .logo {
+    font-family: 'Cinzel', serif;
+    color: #FFFEAD;
     font-size: 3rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Gør billedet rundt */
+    object-fit: cover; /* Sørger for, at billedet ikke bliver strukket */
+    margin-right: 1px;
+    margin-left: -10px;
+    margin-bottom: 3px;
 }
 
 /* Login-knap styling */
