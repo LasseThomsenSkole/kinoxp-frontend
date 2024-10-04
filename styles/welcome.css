@@ -222,3 +222,20 @@ footer p {
         flex-direction: column;
     }
 }
+
+/* Styling af den subtile "Se alle" tekst */
+.see-all {
+    font-size: 1.1rem;
+    color: #9D2828; /* Rød farve, der matcher temaet */
+    text-decoration: none;
+    display: block;
+    text-align: right; /* Juster teksten til højre for balance */
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+    transition: color 0.3s ease;
+}
+
+.see-all:hover {
+    color: #FFFEAD; /* Ændrer farve ved hover til lysegul */
+    text-decoration: underline; /* Understreger tekst ved hover */
+}
