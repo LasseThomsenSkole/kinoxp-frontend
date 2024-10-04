@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hent filmtitel</title>
+    <link rel="stylesheet" type="text/css" href="/styles/movie-detail.css">
 </head>
 <body>
+
+<!-- header skal være fragment -->
+<header>
+    <div id="menuToggle">
+        <input id="checkbox" type="checkbox">
+        <label class="toggle" for="checkbox">
+            <div class="bar bar--top"></div>
+            <div class="bar bar--middle"></div>
+            <div class="bar bar--bottom"></div>
+        </label>
+
+        <!-- Skjult menu (vises ved klik på hamburger-menuen) -->
+        <nav id="menu">
+            <ul>
+                <li>Hjem</li>
+                <li>Film</li>
+                <li>Kontakt</li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="logo">KinoXP</h1> <!-- Logoet i midten -->
+    <div class="login-button">
+        <button id="loginBtn">Login</button>
+    </div>
+</header>
+
+<section class="movie-container">
+    <div class="movie-poster-container">
+        <img src="https://creativereview.imgix.net/content/uploads/2023/12/Oppenheimer.jpg?auto=compress,format&q=60&w=1263&h=2000" alt="Filmplakat" class="movie-poster">
+    </div>
+    <div class="movie-details-container">
+        <h2>Filmtitel</h2>
+        <!-- det skal lige være lidt sejere -->
+        <p>Genre: ? | Spilletid: ? min | Aldersgrænse: ? år</p>
+        <div class="line"></div>
+        <p>Her er der en filmbeskrivelse</p>
+    </div>
+</section>
+
 
 </body>
 </html>
