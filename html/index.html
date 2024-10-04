@@ -5,33 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KinoXP</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/welcome.css">
 </head>
 <body>
-<!-- Header med hamburger menu, logo, og login knap -->
-<header>
-    <div id="menuToggle">
-        <input id="checkbox" type="checkbox">
-        <label class="toggle" for="checkbox">
-            <div class="bar bar--top"></div>
-            <div class="bar bar--middle"></div>
-            <div class="bar bar--bottom"></div>
-        </label>
 
-        <!-- Skjult menu (vises ved klik på hamburger-menuen) -->
-        <nav id="menu">
-            <ul>
-                <li>Hjem</li>
-                <li>Film</li>
-                <li>Kontakt</li>
-            </ul>
-        </nav>
-    </div>
-    <h1 class="logo">KinoXP</h1> <!-- Logoet i midten -->
-    <div class="login-button">
-        <button id="loginBtn">Login</button>
-    </div>
-</header>
+<!-- Header vil blive indlæst her -->
+<div data-include="../html/fragments/header.html"></div>
 
 <!-- Sektion til nuværende film -->
 <section class="current-movies">
@@ -56,12 +35,10 @@
     </div>
 </section>
 
-<!-- Footer med pseudo kontaktinformation -->
-<footer>
-    <p>Kontakt os: +45 60606060</p>
-    <p>Email: email@kinoXP.dk</p>
-</footer>
+<!-- Footer vil blive indlæst her -->
+<div data-include="../html/fragments/footer.html"></div>
 
-<script src="../js/test.js"></script>
+<script src="../js/loadfragments.js"></script>
+<script src="../js/welcomepage.js"></script>
 </body>
 </html>
