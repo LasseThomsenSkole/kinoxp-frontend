@@ -1,9 +1,17 @@
-body {
-    display: flex; /* Turn the body into a flex container */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    height: 100vh; /* Ensure body takes full viewport height */
-    margin: 0; /* Remove default body margin */
+.login-popup {
+    position: fixed; /* Change from absolute to fixed */
+    display: none;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    top: 0; /* Ensure it's positioned relative to the viewport */
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background: transparent;
+}
+.login-popup.show{
+    display: flex;
 }
 .container {
     width: 300px;
