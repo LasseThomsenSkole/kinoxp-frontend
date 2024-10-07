@@ -6,6 +6,8 @@ body {
     color: #FFFEAD; /* Kontrasterende lys tekst */
     letter-spacing: 2px;
 }
+
+
 #days-container {
     display: flex;
     justify-content: space-around;
