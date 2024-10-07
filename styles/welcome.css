@@ -276,3 +276,105 @@ nav ul li a {
 nav ul li a:hover {
     color: #FFFEAD;
 }
+
+/* Pop-up styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: #2A2222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+}
+
+/* Skærm-sektion */
+#screen {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Sædecontainer */
+#seat-container {
+    display: flex;
+    flex-direction: column; /* Sørg for, at rækker er placeret ovenpå hinanden */
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 0 20px; /* Tilføj lidt plads på siderne */
+}
+
+/* Række-styling */
+.row {
+    display: flex; /* Sørg for, at sæder i en række er placeret horisontalt */
+    justify-content: center;
+    margin-bottom: 10px; /* Plads mellem rækkerne */
+}
+
+/* Sæde-styling */
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    margin: 0 5px; /* Plads mellem sæderne */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.seat.selected {
+    background-color: blue;
+}
+
+.seat.occupied {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+/* Valgte sæder og pris */
+#seat-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#selected-seats, #total-price {
+    font-size: 1.2rem;
+}
+
+#seat-count-container {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+#seat-count {
+    width: 50px;
+    text-align: center;
+}
+
+/* Justering af rækker */
+.row-number {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    text-align: right;
+    padding-right: 10px;
+    color: #FFFEAD;
+}
+
+
