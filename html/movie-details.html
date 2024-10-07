@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hent filmtitel</title>
-    <link rel="stylesheet" type="text/css" href="../styles/welcome.css">
+    <title class="title">vi har ingen data</title>
+    <link rel="stylesheet" type="text/css" href="../styles/movie-detail.css">
 </head>
 <body>
 
@@ -14,9 +14,12 @@
         <img src="https://creativereview.imgix.net/content/uploads/2023/12/Oppenheimer.jpg?auto=compress,format&q=60&w=1263&h=2000" alt="Filmplakat" class="movie-poster">
     </div>
     <div class="movie-details-container">
-        <h2>Filmtitel</h2>
+        <h2 class="title">vi har ingen data</h2>
         <!-- det skal lige være lidt sejere -->
-        <p>Genre: ? | Spilletid: ? min | Aldersgrænse: ? år</p>
+        <p id="genre">Genre: </p>
+        <p id="duration"> | Spilletid: </p>
+        <p id="ageLimit">min | Aldersgrænse: </p>
+        <p>år</p>
         <div class="line"></div>
         <p>Her er der en filmbeskrivelse</p>
     </div>
@@ -28,4 +31,6 @@
 <div data-include="../html/fragments/footer.html"></div>
 
 <script src="../js/loadfragments.js"></script>
+<script src="../js/movie-detail.js"></script>
+
 </html>
