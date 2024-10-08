@@ -1,63 +1,87 @@
-//dynamic dates
-document.addEventListener('DOMContentLoaded', () => {
-    const daysContainer = document.getElementById('days-container');
-    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const today = new Date();
+const daysContainer = document.getElementById('day');
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const today = new Date();
 
-    for (let i = 0; i < 7; i++) {
-        const dayElement = document.createElement('div');
-        dayElement.className = 'day';
-        const futureDate = new Date(today);
-        futureDate.setDate(today.getDate() + i);
-        const dayName = daysOfWeek[futureDate.getDay()];
-        dayElement.textContent = `${dayName}, ${futureDate.getDate()}/${futureDate.getMonth() + 1}`;
-        daysContainer.appendChild(dayElement);
-    }
+//DAY 1
+document.addEventListener('DOMContentLoaded', () => {
+    const daysContainer = document.getElementById('day');
+
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    const dayName = daysOfWeek[today.getDay()];
+    dayElement.textContent = `${dayName}, ${today.getDate()}/${today.getMonth() + 1}`;
+    daysContainer.appendChild(dayElement);
+});
+//DAY 2
+document.addEventListener('DOMContentLoaded', () => {
+    const daysContainer = document.getElementById('day1');
+
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    const dayName = daysOfWeek[tomorrow.getDay()];
+    dayElement.textContent = `${dayName}, ${tomorrow.getDate()}/${tomorrow.getMonth() + 1}`;
+    daysContainer.appendChild(dayElement);
 });
 
-//Fetch title
-async function fetchMovieDetails() {
-    try {
-        const response = await fetch('http://localhost:8080/'+ id, {
-            method: 'POST'
-        })
+//DAY 3
+document.addEventListener('DOMContentLoaded', () => {
+    const daysContainer = document.getElementById('day2');
 
-        if (response.ok) {
-            const movieDetails = await response.json()
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 2);
+    const dayName = daysOfWeek[tomorrow.getDay()];
+    dayElement.textContent = `${dayName}, ${tomorrow.getDate()}/${tomorrow.getMonth() + 1}`;
+    daysContainer.appendChild(dayElement);
+});
+//DAY 4
+document.addEventListener('DOMContentLoaded', () => {
+    const daysContainer = document.getElementById('day3');
 
-            const title = movieDetails.title
-            document.getElementsByClassName('title').textContent = title
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 3);
+    const dayName = daysOfWeek[tomorrow.getDay()];
+    dayElement.textContent = `${dayName}, ${tomorrow.getDate()}/${tomorrow.getMonth() + 1}`;
+    daysContainer.appendChild(dayElement);
+});
+//DAY 5
+document.addEventListener('DOMContentLoaded', () => {
+    const daysContainer = document.getElementById('day4');
 
-            const duration = movieDetails.duration
-            document.getElementById('duration').textContent = duration
-        }
-        else {
-            console.error('en error page')
-        }
-    }
-    catch (error) {
-        console.error(error)
-    }
-}
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 4);
+    const dayName = daysOfWeek[tomorrow.getDay()];
+    dayElement.textContent = `${dayName}, ${tomorrow.getDate()}/${tomorrow.getMonth() + 1}`;
+    daysContainer.appendChild(dayElement);
+});
+//DAY 6
+document.addEventListener('DOMContentLoaded', () => {
+    const daysContainer = document.getElementById('day5');
 
-//Fetch showtime - ingen anelse om det fungere
-async function fetchShowtime() {
-    try {
-        const response = await fetch('http://localhost:8080/'+ showtimeId , {
-            method: 'POST'
-        })
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 5);
+    const dayName = daysOfWeek[tomorrow.getDay()];
+    dayElement.textContent = `${dayName}, ${tomorrow.getDate()}/${tomorrow.getMonth() + 1}`;
+    daysContainer.appendChild(dayElement);
+});
+//DAY 7
+document.addEventListener('DOMContentLoaded', () => {
+    const daysContainer = document.getElementById('day6');
 
-        if (response.ok) {
-            const showtimeDetails = await response.json()
-
-            const showtime = showtimeDetails.showtime
-            document.getElementById('showtime').textContent = showtime
-        }
-        else {
-            console.error('en error page')
-        }
-    }
-    catch (error) {
-        console.error(error)
-    }
-}
+    const dayElement = document.createElement('div');
+    dayElement.className = 'day';
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 6);
+    const dayName = daysOfWeek[tomorrow.getDay()];
+    dayElement.textContent = `${dayName}, ${tomorrow.getDate()}/${tomorrow.getMonth() + 1}`;
+    daysContainer.appendChild(dayElement);
+});

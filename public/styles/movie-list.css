@@ -1,22 +1,25 @@
+.film {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
 .titel {
     text-align: center;
 }
+
 body {
     font-family: 'Cinzel', serif; /* Old school cinema font */
     color: #FFFEAD; /* Kontrasterende lys tekst */
     letter-spacing: 2px;
 }
 
+#day, #day1, #day2, #day3, #day4, #day5, #day6 {
+    float: left;
+    width: 10%;
+    padding: 10px;
+}
 
-#days-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-}
-.titel {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-}
 .timeslots-list {
     display: flex;
     justify-content: space-around;
@@ -30,7 +33,4 @@ body {
     margin: 0.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.timeslots {
-    text-align: center;
 }
