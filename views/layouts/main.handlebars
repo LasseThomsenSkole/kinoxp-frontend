@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/public/styles/welcome.css">
+    <link rel="stylesheet" href="/public/styles/login.css">
+    <link rel="icon" href="/public/images/favicon-16x16.png" type="image/png">
+</head>
+<body>
+<div class="login-popup">
+    <div class="container">
+        <input type="checkbox" id="register_toggle">
+        <div class="slider">
+            <form class="form" id="loginForm">
+                <span class="title">Log ind</span>
+                <div class="form_control">
+                    <input type="text" id="username" class="input" required="">
+                    <label class="label" for="username">Username</label>
+                </div>
+                <div class="form_control">
+                    <input type="password" id="password" class="input" required="">
+                    <label class="label" for="password">Password</label>
+                </div>
+                <button type="submit">Log ind</button>
+                <span class="bottom_text">Har du ikke et login? <label for="register_toggle" class="switch">Opret login</label> </span>
+            </form>
+            <form class="form" id="signupForm">
+                <span class="title">Sign Up</span>
+                <div class="form_control">
+                    <input type="text" id="signup-username" class="input" required="">
+                    <label class="label" for="signup-username">Username</label>
+                </div>
+                <div class="form_control">
+                    <input type="password" id="signup-password" class="input" required="">
+                    <label class="label" for="signup-password">Password</label>
+                </div>
+                <button type="submit">Sign Up</button>
+                <span class="bottom_text">Har du allerede et login? <label for="register_toggle" class="switch">Log ind</label>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>
+{{> header}} <!-- Include the header partial -->
+
+{{{ body }}} <!-- This is where the main content will be injected -->
+
+
+{{> footer}} <!-- Include the footer partial -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const loginBtn = document.getElementById('loginBtn');
+        const loginPopup = document.querySelector('.login-popup'); // Query by class
+
+        if (!loginBtn) {
+            console.error('Login button not found!');
+            return; // Exit if the button doesn't exist
+        }
+
+        loginBtn.addEventListener('click', () => {
+            if (loginPopup) {
+                loginPopup.classList.toggle('show');
+                console.log('loginBtn clicked');
+            } else {
+                console.error('Login popup not found!');
+            }
+        });
+        loginPopup.addEventListener('click', (event) => {
+            if (event.target === loginPopup) {
+                loginPopup.classList.remove('show');
+            }
+        });
+    });
+</script>
+</body>
+</html>
