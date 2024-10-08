@@ -1,68 +1,49 @@
-document.getElementById('loginForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    const requestBody = {
-        username: username,
-        password: password
-    };
-
-    try {
-        const response = await fetch('http://localhost:8080/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(requestBody)
+document.addEventListener('DOMContentLoaded', function() {
+    // Åbn modal, når login-knappen trykkes
+    const loginBtn = document.getElementById('loginBtn');
+    if (loginBtn) {
+        loginBtn.addEventListener('click', function() {
+            const authModal = document.getElementById('authModal');
+            if (authModal) {
+                authModal.classList.remove('hidden');
+            }
         });
-
-        // Handle response
-        if (response.ok) {
-            const token = await response.text();
-            console.log('Login successful, token:', token);
-
-            localStorage.setItem('jwtToken', token); //ved ik om det er sikkert
-
-           // redirect til et andet sted
-        } else {
-            console.error('Login failed:', response.status, response.statusText);
-        }
-    } catch (error) {
-        console.error('Error during login:', error);
+    } else {
+        console.error('Login-knappen med ID "loginBtn" blev ikke fundet.');
     }
-});
 
-document.getElementById('signupForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const slider = document.getElementById('register_toggle');
-
-    const signupUsername = document.getElementById('signup-username').value;
-    const signupPassword = document.getElementById('signup-password').value;
-
-    const requestBody = {
-        username: signupUsername,
-        password: signupPassword
-    };
-
-    try {
-        const response = await fetch('http://localhost:8080/auth/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(requestBody)
+    // Luk modal, når lukkeknappen (X) trykkes
+    const closeBtn = document.querySelector('.close-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            const authModal = document.getElementById('authModal');
+            if (authModal) {
+                authModal.classList.add('hidden');
+            }
         });
+    } else {
+        console.error('Lukke-knappen med class "close-btn" blev ikke fundet.');
+    }
 
+    // Event listener til at vise signup-sektionen
+    const showSignup = document.getElementById('showSignup');
+    if (showSignup) {
+        showSignup.addEventListener('click', function() {
+            document.getElementById('loginSection').classList.add('hidden');
+            document.getElementById('signupSection').classList.remove('hidden');
+        });
+    } else {
+        console.error('Elementet med ID "showSignup" blev ikke fundet.');
+    }
 
-        if (response.ok) {
-            console.log('Signup successful: ' + await response.text());
-            slider.checked = false;
-        } else {
-            console.error('Signup failed:', response.status, response.statusText);
-        }
-    } catch (error) {
-        console.error('Error during signup:', error);
+    // Event listener til at vise login-sektionen igen
+    const showLogin = document.getElementById('showLogin');
+    if (showLogin) {
+        showLogin.addEventListener('click', function() {
+            document.getElementById('signupSection').classList.add('hidden');
+            document.getElementById('loginSection').classList.remove('hidden');
+        });
+    } else {
+        console.error('Elementet med ID "showLogin" blev ikke fundet.');
     }
 });

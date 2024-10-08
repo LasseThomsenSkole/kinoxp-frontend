@@ -18,12 +18,46 @@
         </nav>
     </div>
     <div class="logo">
-        <span>KIN</span> <!-- Første del af teksten -->
-        <img src="../../images/logo.png" alt="O" class="logo-image"> <!-- Logo som 'O' -->
-        <span>XP</span> <!-- Anden del af teksten -->
+        <span>KIN</span>
+        <img src="../../images/logo.png" alt="O" class="logo-image">
+        <span>XP</span>
     </div>
 
     <div class="login-button">
-        <button id="loginBtn" href="../login.html">Login</button>
+        <button id="loginBtn">Login</button>
     </div>
 </header>
+
+<!-- Modal -->
+<div id="authModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <!-- Login Form -->
+        <div id="loginSection">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Brugernavn:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Adgangskode:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Har du ikke en konto? <a href="#" id="showSignup">Tilmeld dig her</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupSection" class="hidden">
+            <h2>Tilmeld</h2>
+            <form id="signupForm">
+                <label for="signup-username">Brugernavn:</label>
+                <input type="text" id="signup-username" name="signup-username" required>
+                <label for="signup-password">Adgangskode:</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+                <button type="submit">Tilmeld</button>
+            </form>
+            <p>Har du allerede en konto? <a href="#" id="showLogin">Log ind her</a></p>
+        </div>
+    </div>
+</div>
+

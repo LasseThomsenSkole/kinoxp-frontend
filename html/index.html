@@ -14,42 +14,6 @@
 <!-- Header vil blive indlæst her -->
 <div data-include="../html/fragments/header.html"></div>
 
-<!-- DET HER ER USYNLIGT -->
-<div class="login-popup">
-    <div class="container">
-        <input type="checkbox" id="register_toggle">
-        <div class="slider">
-            <form class="form" id="loginForm">
-                <span class="title">Log ind</span>
-                <div class="form_control">
-                    <input type="text" id="username" class="input" required="">
-                    <label class="label" for="username">Username</label>
-                </div>
-                <div class="form_control">
-                    <input type="password" id="password" class="input" required="">
-                    <label class="label" for="password">Password</label>
-                </div>
-                <button type="submit">Log ind</button>
-                <span class="bottom_text">Har du ikke et login? <label for="register_toggle" class="switch">Opret login</label> </span>
-            </form>
-            <form class="form" id="signupForm">
-                <span class="title">Sign Up</span>
-                <div class="form_control">
-                    <input type="text" id="signup-username" class="input" required="">
-                    <label class="label" for="signup-username">Username</label>
-                </div>
-                <div class="form_control">
-                    <input type="password" id="signup-password" class="input" required="">
-                    <label class="label" for="signup-password">Password</label>
-                </div>
-                <button type="submit">Sign Up</button>
-                <span class="bottom_text">Har du allerede et login? <label for="register_toggle" class="switch">Log ind</label>
-            </span>
-            </form>
-        </div>
-    </div>
-</div>
-
 <!-- Sektion til nuværende film -->
 <section class="current-movies">
     <h2>Nuværende Film</h2>
@@ -70,7 +34,6 @@
                 <li>20:00 <button class="reserve-button" data-showtime="20:00" data-movie="Film 2">Reserver</button></li>
             </ul>
         </div>
-        <!-- Tilføj flere film her -->
     </div>
 
     <a href="movie-list.html" class="see-all">Se alle</a>
@@ -124,6 +87,6 @@
 <script src="../js/loadfragments.js"></script>
 <script src="../js/welcomepage.js"></script>
 <script src="../js/reservation.js"></script>
-<script src="../js/login.js"></script>
 </body>
 </html>
+

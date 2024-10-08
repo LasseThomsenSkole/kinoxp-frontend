@@ -291,6 +291,10 @@ nav ul li a:hover {
     z-index: 999;
 }
 
+.hidden {
+    display: none;
+}
+
 .modal-content {
     background-color: #2A2222;
     padding: 20px;
@@ -299,6 +303,16 @@ nav ul li a:hover {
     max-width: 800px;
     text-align: center;
     position: relative;
+}
+
+/* Lukke knap styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
 }
 
 /* Skærm-sektion */
@@ -376,5 +390,7 @@ nav ul li a:hover {
     padding-right: 10px;
     color: #FFFEAD;
 }
+
+
 
 
