@@ -7,8 +7,8 @@
     margin-top: 100px;
 }
 
-.movie-poster-container {
-    width: 50%;
+.left-container {
+    width: 45%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -20,16 +20,16 @@
     object-fit: contain;
 }
 
-.movie-details-container {
+.right-container {
     flex-direction: column;
-    width: 50%;
+    width: 55%;
     display: flex;
 }
 
 
-p{
+p, label{
     font-size: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 10px;
     margin-bottom: 1rem;
     color: #FFFEAD;
     font-family: 'Cinzel', serif;
@@ -38,8 +38,8 @@ p{
 .line {
     height: 2px;
     background-color: #6F1C1C;
-    margin-top: 40px;
-    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     width: 80%;
 }
 
@@ -50,14 +50,80 @@ h2 {
 .button {
     width: 80%;
     background-color: #9D2828;
-    color: white;
+    color: #FFFEAD;
     border: none;
     padding: 0.7rem 1.5rem;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
 }
+
+input {
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 2px solid #6F1C1C;
+    border-radius: 5px;
+    width: 300px;
+    font-family: 'Cinzel', serif;
+}
+
+select {
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 2px solid #6F1C1C;
+    border-radius: 5px;
+    width: 312px;
+    height: 43px;
+    font-family: 'Cinzel', serif;
+}
+
+
+textarea {
+    height: 200px;
+    width: 80%;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 2px solid #6F1C1C;
+    border-radius: 5px;
+}
+
+
+/*det her er bare chatgpt*/
+.input-group {
+    display: flex;
+    align-items: baseline; /* Aligns label and input vertically */
+    width: 80%; /* Full width for the input group */
+    margin-top: 10px; /* Space above each input group */
+}
+
+.input-group label {
+    font-size: 1.5rem;
+    color: #FFFEAD;
+    font-family: 'Cinzel', serif;
+    flex: 0 0 auto; /* Prevents the label from shrinking */
+    width: 150px; /* Fixed width for the label */
+}
+
+.input-group .dotted-line {
+    flex-grow: 1; /* Allows the line to take available space */
+    height: 1px; /* Height of the line */
+    background: transparent; /* Starts as transparent */
+    margin: 0 10px; /* Space around the line */
+    border-bottom: 1px dotted #FFFEAD; /* Dotted line */
+}
+
+/* Dotted line styling */
+.input-group .dotted-line::after {
+    content: "";
+    display: block;
+    height: 1px; /* Height of the line */
+    background: transparent; /* Starts as transparent */
+    border-bottom: 1px dotted #FFFEAD; /* Dotted line */
+}
+
 
 
 
