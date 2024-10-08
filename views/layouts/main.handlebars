@@ -9,12 +9,7 @@
     <link rel="icon" href="/public/images/favicon-16x16.png" type="image/png">
 </head>
 <body>
-{{> header}} <!-- Include the header partial -->
-
-{{{ body }}} <!-- This is where the main content will be injected -->
-
-<!-- Add the login popup here -->
-<div class="login-popup hidden"> <!-- Ensure it's hidden by default -->
+<div class="login-popup">
     <div class="container">
         <input type="checkbox" id="register_toggle">
         <div class="slider">
@@ -48,6 +43,10 @@
         </div>
     </div>
 </div>
+{{> header}} <!-- Include the header partial -->
+
+{{{ body }}} <!-- This is where the main content will be injected -->
+
 
 {{> footer}} <!-- Include the footer partial -->
 <script>
@@ -66,6 +65,11 @@
                 console.log('loginBtn clicked');
             } else {
                 console.error('Login popup not found!');
+            }
+        });
+        loginPopup.addEventListener('click', (event) => {
+            if (event.target === loginPopup) {
+                loginPopup.classList.remove('show');
             }
         });
     });
