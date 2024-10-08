@@ -48,7 +48,28 @@ app.get('/movie/:id', (req, res) => {
             res.status(500).send('Error fetching movie data');
         });
 });
+// endpoint for at oprette en ny film ... det her kan virke lidt dumt da vi nu har 2 backends
+app.post('/create-movie', (req, res) => {
+    const movie = req.body;
+    const token = req.headers['authorization'];
 
+    fetch('http://localhost:8080/create-movie', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: token,
+        },
+        body: JSON.stringify(movie),
+    })
+        .then(response => response.json())
+        .then(() => {
+            //res.redirect(); redirect til alle movies
+        })
+        .catch(error => {
+            console.error('Error creating movie:', error);
+            res.status(500).send('Error creating movie');
+        });
+});
 
 // Start the server
 app.listen(port, () => {
