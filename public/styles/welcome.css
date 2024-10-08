@@ -47,7 +47,7 @@ header {
 
 .logo-image {
     width: 60px;
-    height: 60px;
+    height: 80px;
     border-radius: 50%; /* Gør billedet rundt */
     object-fit: cover; /* Sørger for, at billedet ikke bliver strukket */
     margin-right: 1px;
@@ -57,21 +57,23 @@ header {
 
 /* Login-knap styling */
 .login-button button {
-    background-color: #9D2828;
+    background-color: #9d2828;
     color: white;
-    border: none;
+    border: 1rem #2A2222;
     padding: 0.7rem 1.5rem;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-family: 'Cinzel', serif;
 }
 
 .login-button button:hover {
-    background-color: #FFFEAD;
+    background-color: #9d2828;
     color: #2A2222;
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Cinzel', serif;
 }
 
 .login-button button:active {
