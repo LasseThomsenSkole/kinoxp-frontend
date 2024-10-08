@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Opret ny film</title>
+    <link rel="stylesheet" type="text/css" href="../styles/movie-detail.css">
+</head>
+<body>
+
+<div data-include="../html/fragments/header.html"></div>
+
+<div class="movie-container">
+    <div class="left-container">
+        <img class="movie-poster" src="path_to_poster.jpg" alt="Movie Poster">
+    </div>
+    <div class="right-container">
+        <h2>Opret ny film</h2>
+        <div class="line"></div>
+
+        <div class="input-group">
+            <label for="title">Titel:</label>
+            <div class="dotted-line"></div>
+            <input type="text" id="title" required>
+        </div>
+
+
+        <!-- det skal vel være sådan at man kan vælge flere -->
+        <div class="input-group">
+            <label for="genre">Genre:</label>
+            <div class="dotted-line"></div>
+            <select id="genre" required>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+                <option value="comedy">Komedi</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="action">Action</option>
+                <option value="thriller">Thriller</option>
+                <option value="adventure">Adventure</option>
+                <option value="animation">Animation</option>
+                <option value="documentary">Dokumentar</option>
+                <option value="drama">Drama</option>
+                <option value="family">Familie</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="ageLimit">Aldersbegrænsning:</label>
+            <div class="dotted-line"></div>
+            <input type="text" id="ageLimit" required>
+        </div>
+
+        <div class="input-group">
+            <label for="description">Beskrivelse:</label>
+            <div class="dotted-line"></div>
+            <textarea id="description" maxlength="500"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="image-url">Billede URL:</label>
+            <div class="dotted-line"></div>
+            <input type="url" id="image-url">
+        </div>
+
+        <button class="button">Opret</button>
+    </div>
+</div>
+
+</body>
+
+<div data-include="../html/fragments/footer.html"></div>
+
+<script src="../js/loadfragments.js"></script>
+</html>

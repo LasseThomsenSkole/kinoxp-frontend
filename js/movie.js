@@ -1,29 +1,33 @@
-const id = document.getElementById('id').value
-
+const urlParameters = new URLSearchParams(window.location.search)
+const id = urlParameters.get('id')
 
 async function fetchMovieDetails() {
+    console.log('http://localhost:8080/'+ id)
+
     try {
-        const response = await fetch('http://localhost:8080/'+ id, {
-            method: 'POST'
+        const response = await fetch('http://localhost:8080/movie/'+ id, {
+            method: 'GET'
         })
 
         if (response.ok) {
             const movieDetails = await response.json()
 
-            const title = movieDetails.title
-            document.getElementsByClassName('title').textContent = title
-
-            const genre = movieDetails.genre //find lige ud af
-            document.getElementById('genre').textContent = genre
-
-            const duration = movieDetails.duration
-            document.getElementById('duration').textContent = duration
-
-            const ageLimit = movieDetails.ageLimit
-            document.getElementById('ageLimit').textContent = ageLimit
-
-            const description = movieDetails.description
-            document.getElementById('description').textContent = description
+            if(movieDetails.title) {
+                document.title = movieDetails.title //så det står på fanen
+                document.getElementById('title').textContent = `${movieDetails.title}`
+            }
+            if(movieDetails.genre) {
+                document.getElementById('genre').textContent = `${movieDetails.genre}`
+            }
+            if(movieDetails.duration) {
+                document.getElementById('duration').textContent = `${movieDetails.description}`
+            }
+            if(movieDetails.ageLimit) {
+                document.getElementById('ageLimit').textContent = `${movieDetails.ageLimit}`
+            }
+            if(movieDetails.description) {
+                document.getElementById('description').textContent = `${movieDetails.description}`
+            }
         }
         else {
             console.error('en error page')
@@ -33,3 +37,5 @@ async function fetchMovieDetails() {
         console.error(error)
     }
 }
+
+fetchMovieDetails();
