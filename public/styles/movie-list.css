@@ -14,22 +14,33 @@ body {
     letter-spacing: 2px;
 }
 
+
+
 #day, #day1, #day2, #day3, #day4, #day5, #day6 {
-    float: left;
-    width: 10%;
-    padding: 10px;
+    display: block;
+    padding: 15px;
 }
 
-.timeslots-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+.day-item {
+    top: 15px;
 }
+
+/* til reserver knapper*/
+.timeslots-list {
+    justify-content: right;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
 .timeslots-item {
-    width: 70px;
-    height: 70px;
-    background-color: #736F72;
+    font-family: 'Cinzel', serif;
+    color: #FFFEAD;
+    background-color: #9d2828;
+    display: block;
+    width: 90px;
+    height: 75px;
     margin: 0.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

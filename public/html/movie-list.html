@@ -12,34 +12,80 @@
 
 <h2 class="film">Film</h2>
 <!-- <div id="showtimes"></div> -->
-<section class="titel">
+<section>
     <!-- function to get title of movie -->
     <div>
-    <h2>Film titel</h2>
+    <h2 class="titel">Film titel</h2>
     </div>
 
-    <div id="day"> <!-- days/dates -->
+    <div class="timeslots-list">
+        <div class="day-item">
+        <div id="day"></div> <!-- days/dates -->
+        <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+        </div>
 
+        <div class="day-item">
+        <div id="day1"> <!-- days/dates --></div>
+            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+        </div>
+
+        <div class="day-item">
+        <div id="day2"> <!-- days/dates --></div>
+            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+        </div>
+
+        <div class="day-item">
+        <div id="day3"> <!-- days/dates --></div>
+            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+        </div>
+
+        <div class="day-item">
+        <div id="day4"> <!-- days/dates --></div>
+            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+        </div>
+
+        <div class="day-item">
+        <div id="day5"> <!-- days/dates --></div>
+            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+        </div>
+
+        <div class="day-item">
+        <div id="day6"> <!-- days/dates --></div>
+            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+        </div>
+</div>
+
+
+    <!-- <button class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button> -->
+    <!-- Reservations pop-up -->
+    <div id="seat-popup" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Vælg dine sæder</h2>
+
+            <!-- Input til antal sæder -->
+            <div id="seat-count-container">
+                <label for="seat-count">Antal sæder: </label>
+                <input type="number" id="seat-count" min="1" max="10" value="1">
+            </div>
+
+            <!-- Skærmsektion -->
+            <div id="screen">LÆRRED - SCENE</div>
+
+            <!-- Biografsal med sæder -->
+            <div id="seat-container">
+                <!-- Her bliver sæder genereret dynamisk -->
+            </div>
+
+            <!-- Valgte pladser og pris -->
+            <div id="seat-info">
+                <p id="selected-seats">Valgte pladser: Ingen</p>
+                <p id="total-price">Totalpris: 0 kr.</p>
+            </div>
+
+            <button id="confirm-reservation">Bekræft Reservation</button>
+        </div>
     </div>
-    <div id="day1"> <!-- days/dates -->
-
-    </div>
-    <div id="day2"> <!-- days/dates -->
-
-    </div>
-    <div id="day3"> <!-- days/dates -->
-
-    </div>
-    <div id="day4"> <!-- days/dates -->
-
-    </div>
-    <div id="day5"> <!-- days/dates -->
-
-    </div>
-    <div id="day6"> <!-- days/dates -->
-
-    </div>
-
 
 </section>
 
@@ -61,7 +107,7 @@
 <!-- script for datoer/dage -->
 
 
-
-<script src="../js/movie-list.js"></script>
+<script src="../js/reservation.js"></script>
+<script src="../js/dates.js"></script>
 </body>
 </html>
