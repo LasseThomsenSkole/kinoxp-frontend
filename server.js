@@ -24,6 +24,13 @@ app.get('/', (req, res) => {
         footer: 'fragments/footer'
     });
 });
+app.get('/new-movie', (req, res) => {
+    res.render('new-movie', {
+        title: 'KinoXP',
+        header: 'fragments/header',
+        footer: 'fragments/footer'
+    });
+});
 
 // Start the server
 app.listen(port, () => {
