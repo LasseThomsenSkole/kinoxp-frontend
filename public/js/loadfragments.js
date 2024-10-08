@@ -24,12 +24,4 @@ function includeHTML() {
 
 document.addEventListener('DOMContentLoaded', () => {
     includeHTML();
-    //det her må nød til at være her for at få loginBtn til at virke
-
-    const loginBtn = document.getElementById('loginBtn');
-    const loginPopup = document.getElementById('login-popup');
-
-    loginBtn.addEventListener('click', () => {
-        loginPopup.classList.toggle('show');
-    });
 });

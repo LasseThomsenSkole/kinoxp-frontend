@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KinoXP</title>
+    <title>{{title}}</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/welcome.css">
+    <link rel="stylesheet" href="/styles/welcome.css">
     <link rel="stylesheet" href="/styles/login.css">
-    <link rel="icon" href="../images/favicon-16x16.png" type="image/png">
+    <link rel="icon" href="/images/favicon-16x16.png" type="image/png">
+    <script src="/js/welcomepage.js"></script>
+    <script src="/js/reservation.js"></script>
+    <script src="/js/login.js"></script>
 </head>
 <body>
 
 <!-- Header vil blive indlæst her -->
-<div data-include="../html/fragments/header.html"></div>
 
 <!-- DET HER ER USYNLIGT -->
 <div class="login-popup">
@@ -73,7 +75,7 @@
         <!-- Tilføj flere film her -->
     </div>
 
-    <a href="movie-list.html" class="see-all">Se alle</a>
+    <a href="/html/movie-list.html" class="see-all">Se alle</a>
 </section>
 
 <!-- Sektion til kommende film -->
@@ -86,7 +88,7 @@
         <div class="movie-item">Film 4</div>
     </div>
 
-    <a href="upcoming-movie-list.html" class="see-all">Se alle</a>
+    <a href="/html/upcoming-movie-list.html" class="see-all">Se alle</a>
 </section>
 
 <div id="seat-popup" class="modal hidden">
@@ -119,11 +121,6 @@
 </div>
 
 <!-- Footer vil blive indlæst her -->
-<div data-include="../html/fragments/footer.html"></div>
 
-<script src="../js/loadfragments.js"></script>
-<script src="../js/welcomepage.js"></script>
-<script src="../js/reservation.js"></script>
-<script src="../js/login.js"></script>
 </body>
 </html>
