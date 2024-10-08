@@ -2,8 +2,10 @@ const urlParameters = new URLSearchParams(window.location.search)
 const id = urlParameters.get('id')
 
 async function fetchMovieDetails() {
+    console.log('http://localhost:8080/'+ id)
+
     try {
-        const response = await fetch('http://localhost:8080/'+ id, {
+        const response = await fetch('http://localhost:8080/movie/'+ id, {
             method: 'GET'
         })
 
