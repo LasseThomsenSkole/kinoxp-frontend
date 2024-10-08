@@ -39,3 +39,24 @@ async function fetchMovieDetails() {
 }
 
 fetchMovieDetails();
+
+
+async function fetchMovieTitles() {
+    const movieList = document.getElementById('movieList');
+    try {
+        const response = await fetch('http://localhost:8080/movie/all-movies'); // URL of your backend Java service
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const movies = await response.json();
+        movies.forEach(movie => {
+            const listItem = document.createElement('li');
+            listItem.textContent = movie;
+            movieList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+fetchMovieTitles();

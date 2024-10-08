@@ -25,14 +25,12 @@ body {
     top: 15px;
 }
 
-/* til reserver knapper*/
 .timeslots-list {
     justify-content: right;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
 
 .timeslots-item {
     font-family: 'Cinzel', serif;

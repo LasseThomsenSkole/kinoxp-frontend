@@ -11,14 +11,15 @@
 <body>
 
 <h2 class="film">Film</h2>
-<!-- <div id="showtimes"></div> -->
-<section>
-    <!-- function to get title of movie -->
+
+<!-- en function der caller alle film titler der er i database -->
+<section id="movieList">
     <div>
-    <h2 class="titel">Film titel</h2>
+    <h2 class="titel" id="title">Film titel</h2>
     </div>
 
     <div class="timeslots-list">
+
         <div class="day-item">
         <div id="day"></div> <!-- days/dates -->
         <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
@@ -109,5 +110,6 @@
 
 <script src="../js/reservation.js"></script>
 <script src="../js/dates.js"></script>
+<script src="../js/movie.js"></script>
 </body>
 </html>
