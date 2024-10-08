@@ -7,11 +7,14 @@
     margin-top: 100px;
 }
 
+
+/*tjek om marginleft fungerer på alle skærmstørrelser*/
 .left-container {
     width: 45%;
     justify-content: center;
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 
 .movie-poster {
@@ -37,7 +40,7 @@ p, label{
 
 .line {
     height: 2px;
-    background-color: #6F1C1C;
+    background-color: #9d2828;
     margin-top: 20px;
     margin-bottom: 40px;
     width: 80%;
@@ -124,6 +127,11 @@ textarea {
     border-bottom: 1px dotted #FFFEAD; /* Dotted line */
 }
 
+
+/*tjek lige om det her passer på alle skærmstørrelser*/
+span{
+    margin-right: 9.5%;
+}
 
 
 
