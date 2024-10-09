@@ -43,3 +43,74 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* From Uiverse.io by alexruix */
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    background: #9d2828;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
+
+.card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.text-body {
+    font-size: clamp(0.8rem, 1.5vw, 1rem); /* Adjust body text size dynamically */
+    color: #2A2222;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.text-title {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Dynamically adjust font size */
+    font-weight: bold;
+    padding-top: 1.5rem;
+    max-width: 100%; /* Prevent text from exceeding card width */
+    word-wrap: break-word; /* Allow wrapping of long words */
+    color: #FFFD85;
+}
+
+/*Hover*/
+.card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+.movie-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
