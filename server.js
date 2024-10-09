@@ -130,6 +130,30 @@ app.post('/create-movie', (req, res) => {
         });
 });
 
+app.post('/edit-movie', (req, res) => {
+    const movie = req.body;
+    const token = localStorage.getItem('jwtToken');
+
+
+
+    fetch('http://localhost:3000/create-movie', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: token,
+        },
+        body: JSON.stringify(movie),
+    })
+        .then(response => response.json())
+        .then(() => {
+            //res.redirect(); redirect til alle movies
+        })
+        .catch(error => {
+            console.error('Error creating movie:', error);
+            res.status(500).send('Error creating movie');
+        });
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
