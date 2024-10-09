@@ -29,6 +29,9 @@ async function fetchMovieDetails() {
             if(movieDetails.description) {
                 document.getElementById('description').textContent = `${movieDetails.description}`
             }
+            if(movieDetails.moviePoster) {
+                document.getElementById('moviePoster').textContent = `${movieDetails.moviePoster}`
+            }
         }
         else {
             console.error('en error page')
