@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <div class="movie-container">
     <div class="left-container">
         <img class="movie-poster" id="moviePoster" alt="Movie Poster">
@@ -16,20 +15,17 @@
     <div class="right-container">
         <h2>Opret ny film</h2>
         <div class="line"></div>
-
-        <div class="input-group">
-            <label for="title">Titel:</label>
-            <div class="dotted-line"></div>
-            <input type="text" id="title" required>
-        </div>
-
-
-        <form id="create-movie-form">
+        <form name="createMovieForm" id="createMovieForm">
+            <div class="input-group">
+                <label for="title">Titel:</label>
+                <div class="dotted-line"></div>
+                <input type="text" id="title" name="title" required>
+            </div>
 
             <div class="input-group">
                 <label for="genre">Genre:</label>
                 <div class="dotted-line"></div>
-                <select id="genre" required>
+                <select id="genre" name="genre" required>
                     <option value="horror">Horror</option>
                     <option value="romance">Romance</option>
                     <option value="comedy">Komedi</option>
@@ -44,47 +40,40 @@
                 </select>
             </div>
 
-        <div class="input-group">
-            <label for="ageLimit">Aldersbegrænsning:</label>
-            <div class="dotted-line"></div>
-            <input type="text" id="ageLimit" required>
-        </div>
+            <div class="input-group">
+                <label for="ageLimit">Aldersbegrænsning:</label>
+                <div class="dotted-line"></div>
+                <input type="text" id="ageLimit" name="ageLimit" required>
+            </div>
 
             <div class="input-group">
-            <label for="duration">Spilletid (min):</label>
-            <div class="dotted-line"></div>
-            <input type="text" id="duration" required>
-        </div>
-
-        <div class="input-group">
-            <label for="description">Beskrivelse:</label>
-            <div class="dotted-line"></div>
-            <textarea id="description" maxlength="500"></textarea>
-        </div>
+                <label for="description">Beskrivelse:</label>
+                <div class="dotted-line"></div>
+                <textarea id="description" name="description" maxlength="500"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="duration">Spilletid (min):</label>
+                <div class="dotted-line"></div>
+                <input type="text" id="duration" name="duration" required>
+            </div>
 
             <div class="input-group">
                 <label for="basePrice">Std pris:</label>
                 <div class="dotted-line"></div>
-                <input type="text" id="basePrice" required>
+                <input type="text" id="basePrice" name="basePrice" required>
             </div>
 
-        <div class="input-group">
-            <label for="image-url">Billede URL:</label>
-            <div class="dotted-line"></div>
-            <input type="url" id="moviePoster">
-        </div>
-            <br>
-            <br>
+            <div class="input-group">
+                <label for="moviePoster">Billede URL:</label>
+                <div class="dotted-line"></div>
+                <input type="url" id="moviePoster" name="moviePoster">
+            </div>
 
-        <button type="submit" class="button">Opret</button>
+            <button type="submit" class="button">Opret</button>
         </form>
-        <br>
     </div>
-
 </div>
 
+<script src="/js/create-movie.js"></script>
 </body>
-
-<script src="/js/movie.js"></script>
-
 </html>
