@@ -41,6 +41,7 @@ async function fetchMovieDetails() {
 fetchMovieDetails();
 
 
+
 async function fetchMovieTitles() {
     const movieList = document.getElementById('movieList');
     try {
@@ -60,3 +61,32 @@ async function fetchMovieTitles() {
 }
 
 fetchMovieTitles();
+
+
+async function fetchShowtimes() {
+    try {
+        const response = await fetch('http://localhost:8080/api/showtimes');
+        const showtimes = await response.json();
+        displayShowtimes(showtimes);
+    } catch (error) {
+        console.error('Error fetching showtimes:', error);
+    }
+}
+
+function displayShowtimes(showtimes) {
+    const showtimesDiv = document.getElementById('showtimes');
+    showtimesDiv.innerHTML = '';
+
+    showtimes.forEach(showtime => {
+        const showtimeElement = document.createElement('div');
+        showtimeElement.innerHTML = `
+                    <h2>${showtime.movie.title}</h2>
+                    <p>Theatre: ${showtime.theatre.name}</p>
+                    <p>Showtime: ${new Date(showtime.showtime).toLocaleString()}</p>
+                    <p>Start Time: ${new Date(showtime.startTime).toLocaleString()}</p>
+                `;
+        showtimesDiv.appendChild(showtimeElement);
+    });
+}
+
+fetchShowtimes();
