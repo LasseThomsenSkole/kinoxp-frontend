@@ -48,6 +48,25 @@ app.get('/movie/:id', (req, res) => {
             res.status(500).send('Error fetching movie data');
         });
 });
+
+
+app.get('/edit-movie/:id', (req, res) => {
+    const id = req.params.id;
+    fetch(`http://localhost:8080/movie/${id}`)
+        .then(response => response.json())
+        .then(movie => {
+            res.render('edit-movie', {
+                title: 'KinoXP',
+                header: 'fragments/header',
+                footer: 'fragments/footer',
+                movie: movie
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching movie:', error);
+            res.status(500).send('Error fetching movie data');
+        });
+});
 // endpoint for at oprette en ny film ... det her kan virke lidt dumt da vi nu har 2 backends
 app.post('/create-movie', (req, res) => {
     const movie = req.body;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ændre film oplysninger</title>
-    <link rel="stylesheet" type="text/css" href="/styles/movie-detail.css">
+    <link rel="stylesheet" type="text/css" href="/styles/movie.css">
     <link rel="stylesheet" type="text/css" href="/styles/login.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
         <div class="input-group">
             <label for="title">Titel:</label>
             <div class="dotted-line"></div>
-            <input type="text" id="title" required>
+            <input type="text" id="title" value="{{movie.title}}" required>
         </div>
 
 
@@ -28,7 +28,7 @@
         <div class="input-group">
             <label for="genre">Genre:</label>
             <div class="dotted-line"></div>
-            <select id="genre" required>
+            <select id="genre" value="{{movie.genre}}" required>
                 <option value="horror">Horror</option>
                 <option value="romance">Romance</option>
                 <option value="comedy">Komedi</option>
@@ -46,26 +46,27 @@
         <div class="input-group">
             <label for="ageLimit">Aldersbegrænsning:</label>
             <div class="dotted-line"></div>
-            <input type="text" id="ageLimit" required>
+            <input type="text" id="ageLimit" value="{{movie.ageLimit}}" required>
         </div>
 
         <div class="input-group">
             <label for="description">Beskrivelse:</label>
             <div class="dotted-line"></div>
-            <textarea id="description" maxlength="500"></textarea>
+            <textarea id="description" maxlength="500">{{movie.description}}</textarea>
         </div>
 
         <div class="input-group">
             <label for="image-url">Billede URL:</label>
             <div class="dotted-line"></div>
-            <input type="url" id="image-url">
+            <input type="url" value="{{movie.moviePoster}}" id="image-url">
         </div>
 
-        <!-- mangler post i backend-->
         <button class="button">Opdatér</button>
     </div>
 </div>
 
 </body>
+
+<script src="/js/movie.js"></script>
 
 </html>
