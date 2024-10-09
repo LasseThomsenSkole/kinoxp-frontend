@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
         footer: 'fragments/footer'
     });
 });
+app.get('/admin', (req, res) => {
+    res.render('admin-dashboard', {
+    });
+});
 app.get('/new-movie', (req, res) => {
     res.render('new-movie', {
         title: 'KinoXP',
@@ -100,7 +104,7 @@ app.post('/create-movie', (req, res) => {
     })
         .then(response => response.json())
         .then(() => {
-            //res.redirect(); redirect til alle movies
+            res.redirect('/all-movies')
         })
         .catch(error => {
             console.error('Error creating movie:', error);
