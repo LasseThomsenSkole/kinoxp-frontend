@@ -110,7 +110,7 @@ app.post('/create-movie', (req, res) => {
 
 app.post('/edit-movie', (req, res) => {
     const movie = req.body;
-    const token = localStorage.getItem('jwtToken');
+    const token = req.headers['authorization'];
 
 
 
