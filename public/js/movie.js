@@ -68,11 +68,7 @@ fetchMovieTitles();
 
 
 
-
-
-
-
-
+/* foreach showtime created for x id, add new button with time shown */
 
 
 async function fetchShowtimes() {
