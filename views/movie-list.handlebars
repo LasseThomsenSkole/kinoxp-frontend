@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie List</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="../styles/welcome.css">
     <link rel="stylesheet" href="../styles/movie-list.css">
 </head>
@@ -15,7 +16,7 @@
 <!-- en function der caller alle film titler der er i database -->
 <section id="movieList">
     <div>
-        <h2 class="titel" id="title">Film titel</h2>
+        <h2 class="titel" id="movieList">{{movie.title}}</h2>
     </div>
 
     <div class="timeslots-list">
@@ -23,37 +24,37 @@
             <div id="day"></div> <!-- days/dates -->
             <!-- en function der caller alle showtimes, som en titel har på forskellige dage -->
 
-            <button class="timeslots-item" class="reserve-button" id="showtimes">Tidspunkt</button>
+            <button class="timeslots-item reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
         </div>
 
         <div class="day-item">
             <div id="day1"> <!-- days/dates --></div>
-            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+            <button class="timeslots-item reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
         </div>
 
         <div class="day-item">
             <div id="day2"> <!-- days/dates --></div>
-            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+            <button class="timeslots-item reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
         </div>
 
         <div class="day-item">
             <div id="day3"> <!-- days/dates --></div>
-            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+            <button class="timeslots-item reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
         </div>
 
         <div class="day-item">
             <div id="day4"> <!-- days/dates --></div>
-            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+            <button class="timeslots-item reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
         </div>
 
         <div class="day-item">
             <div id="day5"> <!-- days/dates --></div>
-            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+            <button class="timeslots-item reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
         </div>
 
         <div class="day-item">
             <div id="day6"> <!-- days/dates --></div>
-            <button class="timeslots-item" class="reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
+            <button class="timeslots-item reserve-button" data-showtime="17:00" data-movie="Film 1">Tidspunkt</button>
         </div>
     </div>
 

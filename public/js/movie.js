@@ -1,6 +1,7 @@
 const urlParameters = new URLSearchParams(window.location.search)
 const id = urlParameters.get('id')
 
+/*
 async function fetchMovieDetails() {
     console.log('http://localhost:8080/'+ id)
 
@@ -38,21 +39,20 @@ async function fetchMovieDetails() {
     }
 }
 
-fetchMovieDetails();
-
+fetchMovieDetails();*/
 
 
 async function fetchMovieTitles() {
     const movieList = document.getElementById('movieList');
     try {
-        const response = await fetch('http://localhost:8080/movie/all-movies'); // URL of your backend Java service
+        const response = await fetch('http://localhost:8080/movie/all-movies');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         const movies = await response.json();
         movies.forEach(movie => {
             const listItem = document.createElement('li');
-            listItem.textContent = movie;
+            listItem.textContent = movie.title; // Assuming each movie object has a 'title' property
             movieList.appendChild(listItem);
         });
     } catch (error) {
@@ -61,6 +61,15 @@ async function fetchMovieTitles() {
 }
 
 fetchMovieTitles();
+
+
+
+
+
+
+
+
+
 
 
 async function fetchShowtimes() {
