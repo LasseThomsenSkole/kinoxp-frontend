@@ -137,6 +137,33 @@ span{
     margin-right: 100px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Globale stilarter */
 body {
     font-family: 'Raleway', sans-serif;
@@ -196,6 +223,7 @@ header {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-family: 'Cinzel', serif;
 }
 
 .login-button button:hover {
@@ -203,6 +231,7 @@ header {
     color: #2A2222;
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Cinzel', serif;
 }
 
 .login-button button:active {

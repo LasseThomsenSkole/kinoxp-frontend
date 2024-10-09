@@ -98,3 +98,10 @@ function displayShowtimes(showtimes) {
 }
 
 fetchShowtimes();
+
+
+
+
+function editMovieForm(){
+
+}
