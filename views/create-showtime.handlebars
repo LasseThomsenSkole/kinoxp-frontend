@@ -6,45 +6,51 @@
     <title>Create Showtimes</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/welcome.css">
+    <link rel="stylesheet" href="/styles/login.css">
     <link rel="stylesheet" type="text/css" href="../styles/movie.css">
     <link rel="stylesheet" type="text/css" href="../styles/showtime.css">
     <link rel="icon" href="/images/favicon-16x16.png" type="image/png">
 </head>
 <body>
 
-<div class="showtime-box">
-    <form>
+
+
+
+<div class="margin-container">
+    <div class="showtime-box">
+    <form class="form-container" >
         <h2>Tilføj Showtime</h2>
         <h3>Vælg titel</h3>
         <div class="dropdown">
-            <button class="dropbutton">SHOW TITLE CHOSEN</button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        <h3>Vælg en dato:</h3>
-        <div class="calendar">
-            <label for="date">Choose a date:</label>
-            <input type="date" id="date" name="date">
-        </div>
-        <h3>Vælg et tidspunkt</h3>
-        <div>
-            <label for="appt-time">Choose a time:</label>
-            <input type="time" id="appt-time" name="appt-time">
+
+                <label for="movies" ></label>
+                <select id="movies" onchange="{{title}}">
+                    <option value="title">{{title}}</option>
+                </select>
 
         </div>
+        <h3>Vælg en dato:</h3>
+        <div>
+            <input type="date" id="date" name="date">
+        </div>
+
+        <h3>Vælg et tidspunkt</h3>
+        <div>
+            <input type="time" id="startTime" name="startTime">
+        </div>
+
         <h3>Vælg en biograf:</h3>
         <div class="dropdown">
-            <button class="dropbutton">Theater</button>
-            <div class="dropdown-content">
-                <a href="#">Lille biograf</a>
-                <a href="#">Store biograf</a>
-            </div>
+            <label for="theater" ></label>
+            <select id="theater">
+                <option value="bigTheater">Store Biograf</option>
+                <option value="smallTheater">Lille Biograf</option>
+            </select>
         </div>
-        <input type="submit" value="Submit">
+        <br><br>
+        <button type="submit" class="showtime-button">Opret</button>
     </form>
+    </div>
 </div>
 
 <script src="/js/login.js"></script>

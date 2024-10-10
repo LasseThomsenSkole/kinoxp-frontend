@@ -145,7 +145,7 @@ app.get('/create-showtime', (req, res) => {
     res.render('create-showtime', {
         title: 'KinoXP',
         header: 'fragments/header',
-        footer: 'fragments/footer'
+        footer: 'fragments/footer',
     });
 })
 /*CREATE SHOWTIME

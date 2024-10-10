@@ -1,11 +1,18 @@
 
+.margin-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .showtime-box {
     width: 500px;
     height: 750px;
+    margin: auto;
     border-radius: 20px;
     background: #9d2828;
-    justify-content: center;
     display: block;
     padding: 1.8rem;
     border: 2px solid #110909;
@@ -13,34 +20,24 @@
     overflow: visible;
 }
 
-/* DROPDOWN MENU */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center;    /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
 .dropdown {
     display: flex;
     justify-content: center;
 }
 
 .dropbutton{
-    min-width: 500px;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
+    min-width: 300px;
     border-radius: 5px;
     padding: 5px;
     background-color: #ffffff;
-    min-width: 500px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: #9D2828;
-    padding: 5px 5px;
-    text-decoration: none;
-    display: block;
+    color: #000000;
 }
 
 .dropdown-content a:hover {
@@ -51,10 +48,16 @@
     display: block;
 }
 
-/* DATO */
-
-.calendar {
-    min-width: 500px;
+.showtime-button {
+    width: 200px;
+    background-color: #ffffff;
+    color: #070705;
+    border: #0e0e0e;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
     border-radius: 5px;
-    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
 }
