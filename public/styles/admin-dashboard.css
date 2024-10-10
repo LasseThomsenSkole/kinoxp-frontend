@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2222;
+    color: #fffead;
+    margin: 0;
+    padding: 20px;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+    border: 2px solid #6f1c1c;
+    background-color: #736f72;
+    border-radius: 8px;
+}
+
+.movie-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.movie-table th:first-child,
+.movie-table td:first-child {
+    width: 50px; /* Set the width of the ID column */
+}
+.movie-table th:nth-last-child(2),
+.movie-table td:nth-last-child(2) {
+    width: 30px; /* Base Price column width */
+}
+
+.movie-table th,
+.movie-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #6f1c1c;
+}
+
+.movie-table th {
+    background-color: #9d2828;
+    color: #fffead;
+}
+
+.movie-table td {
+    background-color: #2a2222;
+    color: #fffead;
+}
+
+.movie-table tbody {
+    display: block;
+    max-height: 500px; /* This height ensures that if there are more than 10 movies, a scrollbar appears */
+    overflow-y: auto;
+}
+
+.movie-table thead, .movie-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.movie-table tr:hover {
+    background-color: #9d2828;
+    color: #fffead;
+}
+
+@media (max-width: 768px) {
+    .movie-table th, .movie-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+.film{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.edit-button {
+    background-color: #6f1c1c;
+    color: #fffead;
+    border: 2px solid #9d2828;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    /* Ensure consistent size */
+    width: 100px;  /* Fixed width */
+    height: 40px;  /* Fixed height */
+
+    /* Handle long text */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;  /* Center text vertically */
+}
+.edit-button:hover {
+    background-color: #9d2828;
+    color: #2a2222;
+}
+.create-showtime-button {
+    background-color: #6f1c1c;
+    border: 2px solid #9d2828;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 160px;  /* Fixed width for the button */
+    height: 40px;  /* Fixed height for the button */
+    display: inline-block;
+    text-align: center;
+    padding: 0;  /* Remove button padding */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.create-showtime-button:hover {
+    background-color: #9d2828;
+}
+
+.button-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;  /* Vertically center the text */
+    color: #fffead;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.create-showtime-button:hover .button-link {
+    color: #2a2222;
+}
+.edit-button:hover .button-link {
+    color: #2a2222;
+}
+.delete-button {
+    background-color: #9d2828;  /* Bright red for danger */
+    border: 2px solid #6f1c1c;  /* Dark red border */
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 160px;
+    height: 40px;  /* Fixed height */
+    display: inline-block;
+    padding: 0;  /* Remove default button padding */
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;  /* Center text */
+}
+
+.delete-button:hover {
+    background-color: #6f1c1c;  /* Darker red on hover */
+    color: #fffead;  /* Light yellow text on hover */
+}
+
+.delete-button:focus {
+    outline: none;  /* Remove default outline on focus */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);  /* Optional: add a shadow effect */
+}
+.down-padding{
+    padding-bottom: 10px;
+}
+
