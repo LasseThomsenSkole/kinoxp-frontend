@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const {engine} = require("express-handlebars");
+const {response} = require("express");
 
 // Set up Handlebars as the view engine
 app.engine('handlebars', engine({
@@ -188,8 +189,41 @@ app.get('/edit-showtime/:movieId', (req, res) => {
         });
 });
 
-
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+async function validateUserRole() {
+    const token = localStorage.getItem('jwtToken');
+    try {
+        const response = await fetch('http://localhost:8080/auth/validate-role', {
+            method: 'GET', // Specify the request method
+            headers: {
+                'Authorization': `Bearer ${token}`, // Include the JWT in the Authorization header
+                'Content-Type': 'application/json', // Set the content type
+            },
+        });
+
+        // Check if the response is ok (status code 200-299)
+        if (!response.ok) {
+            throw new Error('Failed to validate role: ' + response.statusText);
+        }
+
+        const roles = await response.json()// Parse the string into a JSON object/array
+
+        console.log('User roles:', roles);
+
+        // Here, you can handle the role as needed
+        if (roles.includes('ADMIN')) {
+            // User is an admin
+            console.log('Access granted to admin features.');
+        } else {
+            // User is not an admin
+            console.log('Access denied. User is not an admin.');
+            window.location.href = '/unauthorized'; // Redirect or show an error
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
