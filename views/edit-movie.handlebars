@@ -20,13 +20,13 @@
         <div class="input-group">
             <label for="title">Titel:</label>
             <div class="dotted-line"></div>
-            <input type="text" id="title" value="{{movie.title}}" required>
+            <input name ="title" type="text" id="title" value="{{movie.title}}" required>
         </div>
         <form name="editMovieForm" id="editMovieForm">
         <div class="input-group">
             <label for="genre">Genre:</label>
             <div class="dotted-line"></div>
-            <select id="genre" value="{{movie.genre}}" required>
+            <select name="genre" id="genre" value="{{movie.genre}}" required>
                 <option value="horror">Horror</option>
                 <option value="romance">Romance</option>
                 <option value="comedy">Komedi</option>
@@ -44,31 +44,31 @@
         <div class="input-group">
             <label for="ageLimit">Aldersbegrænsning:</label>
             <div class="dotted-line"></div>
-            <input type="text" id="ageLimit" value="{{movie.ageLimit}}" required>
+            <input name="ageLimit" type="text" id="ageLimit" value="{{movie.ageLimit}}" required>
         </div>
 
         <div class="input-group">
             <label for="duration">Spilletid (min):</label>
             <div class="dotted-line"></div>
-            <input type="text" id="duration" required value="{{movie.duration}}">
+            <input name="duration" type="text" id="duration" required value="{{movie.duration}}">
         </div>
 
         <div class="input-group">
             <label for="description">Beskrivelse:</label>
             <div class="dotted-line"></div>
-            <textarea id="description" maxlength="500">{{movie.description}}</textarea>
+            <textarea name="description" id="description" maxlength="500">{{movie.description}}</textarea>
         </div>
 
         <div class="input-group">
             <label for="basePrice">Std pris:</label>
             <div class="dotted-line"></div>
-            <input type="text" id="basePrice" value="{{movie.basePrice}}"  required>
+            <input name="basePrice" type="text" id="basePrice" value="{{movie.basePrice}}"  required>
         </div>
 
         <div class="input-group">
             <label for="image-url">Billede URL:</label>
             <div class="dotted-line"></div>
-            <input type="url" value="{{movie.moviePoster}}" id="moviePoster">
+            <input name="moviePoster" type="url" value="{{movie.moviePoster}}" id="moviePoster">
         </div>
         <br>
         <br>
@@ -81,7 +81,7 @@
 
 </body>
 
-<script src="/js/movie.js"></script>
+<script src="/js/edit-movie.js"></script>
 <script src="/js/login.js"></script>
 
 </html>
