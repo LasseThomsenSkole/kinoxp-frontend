@@ -25,8 +25,18 @@ app.get('/', (req, res) => {
     });
 });
 app.get('/admin', (req, res) => {
-    res.render('admin-dashboard', {
-    });
+    fetch(`http://localhost:8080/movie/all-movies`)
+        .then(response => response.json())
+        .then(movies => {
+            res.render('admin-dashboard', {
+                layout: 'admin',
+                movies: movies
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching movies:', error);
+            res.status(500).send('Error fetching movies data');
+        });
 });
 app.get('/new-movie', (req, res) => {
     res.render('new-movie', {
@@ -130,14 +140,14 @@ app.post('/create-movie', (req, res) => {
             res.status(500).send('Error creating movie');
         });
 });
-
-
-// Start the server
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
-
-//CREATE SHOWTIME
+app.get('/create-showtime', (req, res) => {
+    res.render('create-showtime', {
+        title: 'KinoXP',
+        header: 'fragments/header',
+        footer: 'fragments/footer'
+    });
+})
+/*CREATE SHOWTIME
 app.post('/create-showtime', (req, res) => {
     const showtime = req.body;
     const token = req.headers['authorization'];
@@ -158,7 +168,7 @@ app.post('/create-showtime', (req, res) => {
             console.error('Error creating showtime:', error);
             res.status(500).send('Error creating showtime');
         });
-});
+});*/
 //EDIT SHOWTIME
 app.get('/edit-showtime/:movieId', (req, res) => {
     const movieId = req.params.id;
@@ -176,4 +186,10 @@ app.get('/edit-showtime/:movieId', (req, res) => {
             console.error('Error fetching showtime:', error);
             res.status(500).send('Error fetching showtime data');
         });
+});
+
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
 });
