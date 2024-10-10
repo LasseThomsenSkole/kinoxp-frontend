@@ -13,6 +13,7 @@
 <body>
 
 <div class="showtime-box">
+    <form>
 <h2>Tilføj Showtime</h2>
 <h3>Vælg titel</h3>
 <div class="dropdown">
@@ -23,14 +24,27 @@
         <a href="#">Link 3</a>
     </div>
 </div>
-    <h3>Vælg en dato:</h3>
-<div>
-    <form>
+        <h3>Vælg en dato:</h3>
+<div class="calendar">
         <label for="date">Choose a date:</label>
         <input type="date" id="date" name="date">
+</div>
+        <h3>Vælg et tidspunkt</h3>
+        <div>
+            <label for="appt-time">Choose a time:</label>
+            <input type="time" id="appt-time" name="appt-time">
+
+        </div>
+    <h3>Vælg en biograf:</h3>
+    <div class="dropdown">
+        <button class="dropbutton">Theater</button>
+        <div class="dropdown-content">
+            <a href="#">Lille biograf</a>
+            <a href="#">Store biograf</a>
+        </div>
+    </div>
         <input type="submit" value="Submit">
     </form>
-</div>
 </div>
 
 
