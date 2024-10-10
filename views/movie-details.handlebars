@@ -15,7 +15,7 @@
     <div class="right-container">
         <h2 id="title">{{movie.title}}</h2>
         <p id="movieDetails" style="letter-spacing: 2px">
-            Genre: <span id="genre">{{movie.genre}}</span>Spilletid: <span id="duration">{{movie.duration}} min</span>Aldersgrænse: <span id="ageLimit">{{movie.ageLimit}} år</span>
+            Genre: <span class="span-gap" id="genre">{{movie.genre}}</span>Spilletid: <span class="span-gap" id="duration">{{movie.duration}} min</span>Aldersgrænse: <span class="span-gap" id="ageLimit">{{movie.ageLimit}} år</span>
         </p>
         <div class="line"></div>
         <p id="description">{{movie.description}}</p>
@@ -23,11 +23,11 @@
         <br>
         <br>
 
-        <!-- det her virker ikke, find ud af senere, nu er der i det midnste knap-->
+        <!-- det her virker ikke, find ud af senere, nu er der i det mindste knap-->
         <button class="button">Reservér billetter</button>
         <div id="seat-popup" class="modal hidden">
             <div class="modal-content">
-                <span class="close-btn">&times;</span>
+                <span class="close-btn span-gap">&times;</span>
                 <h2>Vælg dine sæder</h2>
 
                 <!-- Input til antal sæder -->
