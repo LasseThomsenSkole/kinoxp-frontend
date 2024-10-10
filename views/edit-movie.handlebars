@@ -22,9 +22,7 @@
             <div class="dotted-line"></div>
             <input type="text" id="title" value="{{movie.title}}" required>
         </div>
-
-
-        <!-- det skal vel være sådan at man kan vælge flere -->
+        <form name="editMovieForm" id="editMovieForm">
         <div class="input-group">
             <label for="genre">Genre:</label>
             <div class="dotted-line"></div>
@@ -75,8 +73,10 @@
         <br>
         <br>
 
-        <button class="button">Opdatér</button>
+        <button type="submit" class="button">Opdatér</button>
+        </form>
     </div>
+
 </div>
 
 </body>

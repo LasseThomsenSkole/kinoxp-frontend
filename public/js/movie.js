@@ -1,5 +1,4 @@
-const urlParameters = new URLSearchParams(window.location.search)
-const id = urlParameters.get('id')
+
 
 /*
 async function fetchMovieDetails() {
@@ -44,6 +43,8 @@ async function fetchMovieDetails() {
 
 fetchMovieDetails();*/
 
+
+import {response} from "express";
 
 async function fetchMovieTitles() {
     const movieList = document.getElementById('movieList');
@@ -102,6 +103,48 @@ fetchShowtimes();
 
 
 
-function editMovieForm(){
+async function editMovie(){
+    document.getElementById('editMovieForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const movieId = document.getElementById('movieId').value;
+        const title = document.getElementById('title').value;
+        const genre = document.getElementById('genre').value;
+        const ageLimit = document.getElementById('ageLimit').value;
+        const description = document.getElementById('description').value;
+        const duration = document.getElementById('duration').value;
+        const basePrice = document.getElementById('basePrice').value;
+        const moviePoster = document.getElementById('moviePoster').value;
+
+        const updatedMovie = {
+            id: movieId,
+            title: title,
+            genre: genre,
+            ageLimit: ageLimit,
+            description: description,
+            duration: duration,
+            basePrice: basePrice,
+            poster: moviePoster
+        };
+
+        const token = await response.text();
+
+        fetch(`http://localhost:8080/edit-movie/${movieId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: token,
+            },
+            body: JSON.stringify(updatedMovie)
+        })
+            .then(response => response.json())
+            .then(() => {
+                res.redirect();
+            })
+            .catch(error => {
+                console.error('Error creating movie:', error);
+                response.status(500).send('Error creating movie');
+            });
+    });
 
 }
