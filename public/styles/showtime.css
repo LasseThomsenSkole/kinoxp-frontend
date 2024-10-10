@@ -1,0 +1,56 @@
+
+
+.showtime-box {
+    width: 500px;
+    height: 750px;
+    border-radius: 20px;
+    background: #9d2828;
+    justify-content: center;
+    display: block;
+    padding: 1.8rem;
+    border: 2px solid #110909;
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    display: flex;
+    justify-content: center;
+}
+
+.dropbutton{
+    min-width: 500px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+    min-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #9D2828;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #dadada;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* DATO */
+
+.showtime-form

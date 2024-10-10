@@ -89,6 +89,7 @@ app.get('/edit-movie/:id', (req, res) => {
             res.status(500).send('Error fetching movie data');
         });
 });
+
 // endpoint for at oprette en ny film ... det her kan virke lidt dumt da vi nu har 2 backends
 app.post('/create-movie', (req, res) => {
     const movie = req.body;
@@ -139,4 +140,45 @@ app.post('/edit-movie', (req, res) => {
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
+});
+
+//CREATE SHOWTIME
+app.post('/create-showtime', (req, res) => {
+    const showtime = req.body;
+    const token = req.headers['authorization'];
+
+    fetch('http://localhost:8080/showtime/create-showtime', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: token,
+        },
+        body: JSON.stringify(showtime),
+    })
+        .then(response => response.json())
+        .then(() => {
+            res.redirect('/all-showtimes')
+        })
+        .catch(error => {
+            console.error('Error creating showtime:', error);
+            res.status(500).send('Error creating showtime');
+        });
+});
+//EDIT SHOWTIME
+app.get('/edit-showtime/:movieId', (req, res) => {
+    const movieId = req.params.id;
+    fetch(`http://localhost:8080/showtime/${movieId}`)
+        .then(response => response.json())
+        .then(showtime => {
+            res.render('edit-showtime', {
+                title: 'KinoXP',
+                header: 'fragments/header',
+                footer: 'fragments/footer',
+                movie: showtime
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching showtime:', error);
+            res.status(500).send('Error fetching showtime data');
+        });
 });

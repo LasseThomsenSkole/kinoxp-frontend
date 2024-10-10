@@ -7,7 +7,7 @@ body {
     color: #FFFEAD; /* Lysegul tekstfarve */
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Cinzel', serif; /* Old school cinema font */
     color: #FFFEAD; /* Kontrasterende lys tekst */
     text-transform: uppercase;
@@ -20,6 +20,10 @@ h1 {
 
 h2 {
     font-size: 2rem; /* Overskrifter for sektioner */
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 p {
