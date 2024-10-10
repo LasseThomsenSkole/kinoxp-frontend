@@ -71,6 +71,24 @@ app.get('/all-movies', (req, res) => {
         });
 });
 
+//GET movie-list
+app.get('/upcoming-movies', (req, res) => {
+    fetch(`http://localhost:8080/movie/upcoming-movies`)
+        .then(response => response.json())
+        .then(movies => {
+            res.render('upcoming-movie-list', {
+                title: 'KinoXP',
+                header: 'fragments/header',
+                footer: 'fragments/footer',
+                movies: movies
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching movies:', error);
+            res.status(500).send('Error fetching movies data');
+        });
+});
+
 
 app.get('/edit-movie/:id', (req, res) => {
     const id = req.params.id;

@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upcoming Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Movie List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/welcome.css">
+    <link rel="stylesheet" href="../styles/movie-list.css">
+</head>
+<body>
+
+<h2 class="film">Kommende Film</h2>
+
+<!-- Funktion der henter alle kommende film i databasen -->
+<section id="upcomingMovieList">
+    <div class="movie-cards">
+        {{#each upcomingMovies}}
+            <div class="card" onclick="redirectToMovie({{id}})">
+                <div class="card-details">
+                    <p class="text-title">{{title}}</p>
+                    <p class="text-body">{{description}}</p>
+                    <p class="text-date">Udgivelsesdato: {{releaseDate}}</p>
+                </div>
+            </div>
+        {{/each}}
+        <script>
+            function redirectToMovie(id) {
+                window.location.href = "/movie/" + id;
+            }
+        </script>
+    </div>
+</section>
+
+<!-- Sektion for kommende showtimes -->
+<section id="showtimesList">
+    <h3>Kommende Showtimes</h3>
+    {{#each upcomingMovies}}
+        <div class="movie-showtimes">
+            <h4>{{title}} - Udgivelsesdato: {{releaseDate}}</h4>
+            <div class="timeslots-list">
+                {{#each showtimes}}
+                    <div class="day-item">
+                        <p class="day">{{date}}</p> <!-- Fremtidige datoer -->
+                        <button class="timeslots-item reserve-button">{{startTime}}</button>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    {{/each}}
+</section>
+
+
+<script src="../js/dates.js"></script>
+</body>
+</html>
