@@ -1,3 +1,11 @@
+const url = window.location.href;
+const urlObj = new URL(url);
+const id = urlObj.pathname.split('/').pop();
+console.log(id);
+
+
+
+
 document.getElementById('editMovieForm').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent the default form submission
     const formData = new FormData(event.target);
