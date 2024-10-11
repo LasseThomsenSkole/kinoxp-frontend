@@ -1,4 +1,4 @@
-async function isAdmin() {
+export async function isAdmin() {
     const token = localStorage.getItem('jwtToken');
     try {
         const response = await fetch('http://localhost:8080/auth/validate-role', {
