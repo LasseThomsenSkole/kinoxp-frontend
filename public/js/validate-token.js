@@ -24,13 +24,3 @@ export async function isAdmin() {
         console.error('Error:', error);
     }
 }
-// det her usikkert
-document.addEventListener('DOMContentLoaded', async function() {
-    const isAdmin = await isAdmin();
-
-    if (isAdmin) {
-        console.log("User is an admin.");
-    } else {
-        window.location.href = '/';
-    }
-});
