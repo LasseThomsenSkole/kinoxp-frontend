@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie List</title>
+    <title>Film List</title>
     <link rel="stylesheet" href="/styles/admin-dashboard.css">
 </head>
 <body>
 <h2 class="film">Film</h2>
 <div class="button-container down-padding">
     <button class="edit-button">
-        <a href="/new-movie" class="button-link">Insert movie</a>
+        <a href="/new-movie" class="button-link">Opret Film</a>
     </button>
 </div>
 <div class="table-container">
@@ -18,15 +18,15 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>Title</th>
+            <th>Titel</th>
             <th>Genre</th>
-            <th>Duration (min)</th>
-            <th>Age Limit</th>
-            <th>Release Date</th>
-            <th>End Date</th>
-            <th>Description</th>
-            <th>Base Price ($)</th>
-            <th>Actions</th>
+            <th>Varighed (min)</th>
+            <th>Alders grænse</th>
+            <th>Udgivelses Dato</th>
+            <th>Slut Dato</th>
+            <th>Beskrivelse</th>
+            <th>Basis Pris</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -40,17 +40,17 @@
                 <td>{{releaseDate}}</td>
                 <td>{{endDate}}</td>
                 <td>{{description}}</td>
-                <td>{{basePrice}}</td>
+                <td>{{basePrice}}Dkk</td>
                 <td>
                     <div class="button-container">
                         <button class="edit-button">
-                            <a href="/edit-movie/{{id}}" class="button-link">Edit</a>
+                            <a href="/edit-movie/{{id}}" class="button-link">Rediger</a>
                         </button>
                         <button class="create-showtime-button">
-                            <a href="/create-showtime/{{id}}" class="button-link">Showtime</a>
+                            <a href="/create-showtime/{{id}}" class="button-link">Spilletid</a>
                         </button>
                         <button class="delete-button">
-                            Delete
+                            Slet
                         </button>
                     </div>
                 </td>
