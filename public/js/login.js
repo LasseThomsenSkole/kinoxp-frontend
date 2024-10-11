@@ -1,3 +1,5 @@
+import {isAdmin} from "/js/validate-token.js";
+
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -66,3 +68,8 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
         console.error('Error during signup:', error);
     }
 });
+isAdmin().then(isAdmin => {
+    if (isAdmin) {
+        document.getElementById('menu-list').innerHTML += '<li><a href="/admin">Dashboard</a></li>';
+    }
+})
