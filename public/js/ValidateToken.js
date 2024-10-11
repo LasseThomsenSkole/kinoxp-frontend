@@ -1,4 +1,4 @@
-async function validateUserRole() {
+async function isAdmin() {
     const token = localStorage.getItem('jwtToken');
     try {
         const response = await fetch('http://localhost:8080/auth/validate-role', {
@@ -26,7 +26,7 @@ async function validateUserRole() {
 }
 // det her usikkert
 document.addEventListener('DOMContentLoaded', async function() {
-    const isAdmin = await validateUserRole();
+    const isAdmin = await isAdmin();
 
     if (isAdmin) {
         console.log("User is an admin.");
