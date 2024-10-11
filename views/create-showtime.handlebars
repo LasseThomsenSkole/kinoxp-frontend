@@ -23,15 +23,15 @@
         <h3>Vælg titel</h3>
         <div class="dropdown">
 
-                <label for="movies" ></label>
-                <select id="movies" onchange="{{title}}">
-                    <option value="title">{{title}}</option>
+                <label for="movieId" ></label>
+                <select id="movieId" onchange="{{title}}">
+                    <option value="movieId">{{title}}</option>
                 </select>
 
         </div>
         <h3>Vælg en dato:</h3>
         <div>
-            <input type="date" id="date" name="date">
+            <input type="date" id="showtime" name="showtime">
         </div>
 
         <h3>Vælg et tidspunkt</h3>
@@ -41,8 +41,8 @@
 
         <h3>Vælg en biograf:</h3>
         <div class="dropdown">
-            <label for="theater" ></label>
-            <select id="theater">
+            <label for="theatre" ></label>
+            <select id="theatre">
                 <option value="bigTheater">Store Biograf</option>
                 <option value="smallTheater">Lille Biograf</option>
             </select>
@@ -54,5 +54,6 @@
 </div>
 
 <script src="/js/login.js"></script>
+<script src="/js/create-showtime.js"></script>
 </body>
 </html>
