@@ -180,7 +180,7 @@ app.get('/edit-showtime/:movieId', (req, res) => {
                 title: 'KinoXP',
                 header: 'fragments/header',
                 footer: 'fragments/footer',
-                movie: showtime
+                showtime: showtime
             });
         })
         .catch(error => {
