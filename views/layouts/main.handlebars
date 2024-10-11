@@ -23,6 +23,7 @@
                     <input type="password" id="password" class="input" required="">
                     <label class="label" for="password">Password</label>
                 </div>
+                <span class="failed-login">Forkert brugernavn eller adgangskode</span>
                 <button type="submit">Log ind</button>
                 <span class="bottom_text">Har du ikke et login? <label for="register_toggle" class="switch">Opret login</label> </span>
             </form>
@@ -52,19 +53,11 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const loginBtn = document.getElementById('loginBtn');
-        const loginPopup = document.querySelector('.login-popup'); // Query by class
-
-        if (!loginBtn) {
-            console.error('Login button not found!');
-            return; // Exit if the button doesn't exist
-        }
+        const loginPopup = document.querySelector('.login-popup');
 
         loginBtn.addEventListener('click', () => {
             if (loginPopup) {
                 loginPopup.classList.toggle('show');
-                console.log('loginBtn clicked');
-            } else {
-                console.error('Login popup not found!');
             }
         });
         loginPopup.addEventListener('click', (event) => {
