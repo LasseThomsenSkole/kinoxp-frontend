@@ -23,11 +23,11 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
             const token = await response.text();
             console.log('Login successful, token:', token);
 
-            localStorage.setItem('jwtToken', token); //ved ik om det er sikkert
+            localStorage.setItem('jwtToken', token);
+            document.querySelector('.login-popup').classList.remove('show');
 
-           // redirect til et andet sted
-        } else {
-            console.error('Login failed:', response.status, response.statusText);
+        } else if (response.status === 403) {
+            document.getElementById('login-failed').innerText = 'Forkert brugernavn eller adgangskode';
         }
     } catch (error) {
         console.error('Error during login:', error);
