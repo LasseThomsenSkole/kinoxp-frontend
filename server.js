@@ -141,11 +141,13 @@ app.post('/create-movie', (req, res) => {
             res.status(500).send('Error creating movie');
         });
 });
-app.get('/create-showtime', (req, res) => {
+app.get('/create-showtime/:id', (req, res) => {
+    const id = req.params.id;
     res.render('create-showtime', {
         title: 'KinoXP',
         header: 'fragments/header',
         footer: 'fragments/footer',
+        movieId: id
     });
 })
 /*CREATE SHOWTIME
